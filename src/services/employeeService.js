@@ -9,6 +9,9 @@ class EmployeeService{
     static removeEmployee(employeeId){
         return axios.delete(`${EMPLOYEE_API_URL}/${employeeId}`);
     }
+    static createEmployee(employee){
+        return axios.post(EMPLOYEE_API_URL, employee);
+    }
 }
 
 export default EmployeeService;
